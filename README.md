@@ -3,7 +3,7 @@ Simulación de pipeline bancario con SAS + Python + AWS.
 
 # Data Pipeline – SAS + Python + AWS (Simulación)
 
-Este proyecto simula un **pipeline bancario de datos** como los que se desarrollan en empresas de consultoría tecnológica (ej. Inetum) para el sector financiero (ej. BBVA).  
+Este proyecto simula un **pipeline bancario de datos** como los que se desarrollan en empresas de consultoría tecnológica para el sector financiero.  
 Incluye **ingesta de datos, limpieza, transformación, KPIs y visualización**, usando **SAS, Python y AWS**.
 
 ---
@@ -19,7 +19,7 @@ Incluye **ingesta de datos, limpieza, transformación, KPIs y visualización**, 
 
 ## 📂 Estructura del repositorio
 
-bbva-pipeline-sas/
+pipeline-sas/
 │
 ├── data/ # Datos de prueba (clientes.csv, transacciones.csv)
 ├── src/
@@ -58,7 +58,7 @@ bbva-pipeline-sas/
 
 ### 1. Ingesta
 - Archivos CSV (`clientes.csv`, `transacciones.csv`).  
-- En la vida real, llegarían desde **SFTP, API REST o bucket S3**.  
+- En proyecto real, llegarían desde **SFTP, API REST o bucket S3**.  
 
 Ejemplo SAS:
 
@@ -74,7 +74,7 @@ Ejemplo python
 
 import boto3
 s3 = boto3.client("s3")
-s3.download_file("bbva-bucket", "transacciones/2025-09-01.csv", "data/transacciones.csv")
+s3.download_file("bucket", "transacciones/2025-09-01.csv", "data/transacciones.csv")
 
 2. Limpieza
 
@@ -159,4 +159,3 @@ Validaciones automáticas en tests.
 
 Felipe Duque
 Ingeniero en Sistemas y Telecomunicaciones | Analista & Data Engineer.
-LinkedIn | GitHub
